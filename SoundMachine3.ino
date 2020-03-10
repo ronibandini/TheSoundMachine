@@ -41,9 +41,8 @@ long randNumber;
 
 void setup(){
         
-        Serial.begin(9600);        
-
-        //uint8_t data[] = { 0xff, 0xff, 0xff, 0xff };
+        Serial.begin(9600);              
+          
         display.setBrightness(0x0f);
              
         display.setSegments(SEG_START); 
@@ -73,17 +72,16 @@ void setup(){
 void loop(){
 
   // read button
-  buttonValue = digitalRead(buttonPin);
-  
-   // for random sounds in each moisture category
-   randomSeed(analogRead(4));   
+  buttonValue = digitalRead(buttonPin);  
                
   if (buttonValue == LOW) {
 
           // button has been pressed, map humidty sensor
           humidValue = map(analogRead(sensor), 0, 1023, 100, 0);
          
-          
+           // for random sounds in each moisture category
+          randomSeed(analogRead(0));
+        
           Serial.print("Humidity: ");
           Serial.print(humidValue);
           Serial.println("%");
@@ -92,7 +90,7 @@ void loop(){
           display.showNumberDec(humidValue, false,4);
           
           if (humidValue<40){
-                randNumber = random(1, 9);
+                randNumber = random(1, 10);
                 Serial.println("Dry");
                 switch (randNumber) {
                   case 1:
@@ -128,7 +126,7 @@ void loop(){
             }
         
           if (humidValue>39 and humidValue<60){
-                randNumber = random(10, 11);
+                randNumber = random(10, 13);
                 Serial.println("Medium");
                 Serial.println(randNumber);
                 switch (randNumber) {                 
@@ -142,7 +140,7 @@ void loop(){
             }  
         
            if (humidValue>61){
-                randNumber = random(12, 18);
+                randNumber = random(12, 19);
                 Serial.println("Lot of water");
                 Serial.println(randNumber);
                 switch (randNumber) {
