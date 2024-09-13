@@ -1,4 +1,4 @@
-# TheSoundMachine
+# The Sound Machine
 Arduino code for The Sound Machine based on Roald Dahl short story
 
 Based on Roald Dahl short story, this Arduino based machine will let you "hear" plant mood according to soil moisture.  
@@ -29,7 +29,12 @@ DFPlayer mp3 player
 MicroSD card
 Custom case.
 
-You can find complete instructions in the PDF.
+
+# Contact 
+
+📫 For code customizations or interesting Arduino and Raspberry Pi projects you can reach me at 
+https://www.instagram.com/ronibandini/
+https://x.com/RoniBandini
 
 Twitter @RoniBandini
 Instagram @RoniBandini 
