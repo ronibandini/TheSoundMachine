@@ -987,24 +987,6 @@ Another project that turns an existing object into a new interface for literatur
 
 # ⚠️ Notes
 
-## The audio is prerecorded
-
-The Sound Machine does not amplify or translate actual acoustic signals produced by the connected plant.
-
-Its behavior is:
-
-```text
-soil reading
-     │
-     ▼
-software mapping
-     │
-     ▼
-prerecorded sound
-```
-
-The sounds are part of the artistic interpretation.
-
 ---
 
 ## Resistive soil sensors
@@ -1016,19 +998,6 @@ For occasional measurements this may be acceptable, but for long-term monitoring
 - powering the probe only while taking a reading
 - using a capacitive soil-moisture sensor
 - periodically recalibrating the system
-
----
-
-## Calibration
-
-Do not assume that the same analog values represent identical moisture levels across different:
-
-- soils
-- pots
-- sensors
-- plants
-
-Calibrate the system for the installation where it will be used.
 
 ---
 
